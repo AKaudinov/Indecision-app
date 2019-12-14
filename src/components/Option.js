@@ -1,10 +1,14 @@
 import React from "react";
 
-const Option = ({option, onRemoveOption}) => {
+const Option = ({option, count, onRemoveOption}) => {
     return (
-        <p>{option}
-            <button onClick={() => onRemoveOption(option)}>remove</button>
-        </p>
+        <div className="option">
+        <p className="option__text">{count}. {option}</p>
+            <button
+                className="button button--link"
+                onClick={() => onRemoveOption(option)}>remove</button>
+
+        </div>
     )
 };
 

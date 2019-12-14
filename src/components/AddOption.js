@@ -37,15 +37,17 @@ export default class AddOption extends React.Component{ //you can export class d
                 return{ error: 'Please add a valid item'}
             })
         }
-    }
+    };
 
     render(){
         return(
-            <form id="add_option_form" onSubmit={this.onAddOption}>
-                <input name="option" type="text" autoComplete="off"/>
-                <button type="submit">Add</button>
-                {this.state.error && (<p>{this.state.error}</p>)}
+            <div>
+            {this.state.error && (<p className="add-option-error">{this.state.error}</p>)}
+            <form className="add-option" id="add_option_form" onSubmit={this.onAddOption}>
+                <input className="add-option__input" name="option" type="text" autoComplete="off"/>
+                <button className="button" type="submit">Add Option</button>
             </form>
+            </div>
         )
     }
 }

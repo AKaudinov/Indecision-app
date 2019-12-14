@@ -102,11 +102,13 @@ export default class IndecisionApp extends React.Component{
                     <Action
                         hasOptions={this.state.options.length > 0}
                         pickAnOption={this.pickAnOption}/>
-                    <Options
+                        <div className="widget">
+                     <Options
                         options={this.state.options}
                         handleDeleteOptions={this.handleDeleteOptions}
                         onRemoveOption={this.onRemoveOption}/>
-                    <AddOption addOption={this.addOption}/>
+                        <AddOption addOption={this.addOption}/>
+                        </div>
                 </div>
                 <OptionModal
                     selectedOption={this.state.selectedOption}
