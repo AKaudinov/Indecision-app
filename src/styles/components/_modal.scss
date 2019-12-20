@@ -1,0 +1,40 @@
+.ReactModalPortal > div { //target divs that are direct descendants
+  opacity: 0; //start out with no opacity
+}
+
+.ReactModalPortal .ReactModal__Overlay{
+  transition: opacity 200ms ease-in-out; //transition
+  display: flex;
+  justify-content: center; //center everything inside the overlay
+  align-items: center; //align things vertically
+}
+
+.ReactModalPortal .ReactModal__Overlay--after-open{ //actually use the transition
+  opacity: 1;
+}
+
+.ReactModalPortal .ReactModal__Overlay--before-close{ //transition back to 0 opacity
+  opacity: 0;
+}
+
+
+.modal{
+  background: $light-blue;
+  color: white;
+  max-width: 30rem;
+  outline: none;
+  padding: $l-size;
+  text-align: center;
+}
+
+
+.modal__title{
+  margin: 0 0 $m-size 0;
+}
+
+.modal__body{
+  margin: 0 0 $l-size 0;
+  font-size: 2rem;
+  font-weight: 300;
+  word-break: break-all; //wrap the word if it extends beyond the container
+}

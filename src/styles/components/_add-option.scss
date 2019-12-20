@@ -8,6 +8,7 @@
 //add option
 .add-option{
   display: flex;
+  flex-direction: row; //default is row
   padding: $m-size;
 }
 
@@ -19,4 +20,14 @@
   color: darkorange;
   padding: $s-size;
   margin: 0 $s-size 0 0;
+}
+
+
+@media (max-width: $mobile-breakpoint){ //apply styles up to 450 pixels
+  .add-option{
+    flex-direction: column;
+  }
+  .add-option__input{
+    margin: 0 0 $s-size 0;
+  }
 }

@@ -32,6 +32,11 @@ background-color: $purple;
   border: none;
   color: $off-white;
   padding: 0;
-}
+}  //bem
 
-//bem
+
+@media (max-width: $mobile-breakpoint) {
+  .big-button{
+    margin-bottom: $m-size;
+  }
+}
